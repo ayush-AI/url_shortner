@@ -121,8 +121,8 @@
   <div class="container">
     <button onclick="toggleTheme()" class="theme-toggle">&#9788;</button>
     <h1>URL Shortener</h1>
-    <form class="url-form" onsubmit="event.preventDefault(); shortenUrl();">
-      <input type="text" id="urlInput" class="url-input" placeholder="Enter your long URL">
+    <form class="url-form" action="api/shorturl" method="POST">
+      <input type="text" id="urlInput" class="url-input" placeholder="Enter your long URL" name="url">
       <button type="submit" class="shorten-button">Shorten</button>
     </form>
     <div class="shortened-url" id="shortenedUrl">
