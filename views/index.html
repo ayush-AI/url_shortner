@@ -155,13 +155,10 @@
             document.getElementById(
               "shortenedUrl"
             ).innerHTML = `<a href="localhost:3000/api/shorturl/${shortenedUrl}" target="_blank">localhost:3000/api/shorturl/${shortenedUrl}</a>`;
-            console.log("Success:", data);
           })
           .catch((error) => {
             console.error("Error:", JSON.stringify(error));
             document.getElementById("shortenedUrl").innerText = error.message;
-
-            // Handle error here, e.g., display an error message to the user
           });
       }
     </script>

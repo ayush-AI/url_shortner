@@ -54,10 +54,8 @@ app.post('/api/shorturl', function(req, res) {
         short_url: urlCount + 1
       };  
       const result = await collection.insertOne(urlObject);
-      console.log(result);
       res.json({original_url : url, short_url : urlCount + 1});
     }
-  console.log(req.body);
   });
 });
 
